@@ -1,0 +1,21 @@
+/* 선택자 - 복합 */
+/* ABCXYZ */
+span.orange{ /* span 태그이면서 class로 orange값이 있는 선택자의 요소를 선택한다 */
+    color: red;     
+}
+/* ABC > XYZ */
+ul>.orange{    /* ul태그에 자식인 orange라는 class를 가지고있는 요소들을 선택*/
+    color: red;
+}
+/* ABC  XYZ : 선택자 ABC의 하위(후손)요소 XYZ선택 '띄어쓰기'가 선택자의 기호!*/
+div .orange{    /* div태그의 하위요소들 중에 orange라는 class를 가진 요소들을 선택 */
+    color: red;
+}
+/* ABC + XYZ : 선택자 ABC의 다음 형제 요소 XYZ 하나를 선택. */
+.orange + li{ 
+    color: red;
+}
+/* ABC ~XYZ : 선택자 ABC의 다음 형제요소 XYZ 모두를 선택. */
+.orange~li{
+    color: red;
+}

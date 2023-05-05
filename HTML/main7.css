@@ -1,0 +1,23 @@
+.container .item{
+    width: 100px;
+    height: 100px;
+    background-color:  royalblue;
+    margin: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 1s;/* transition : 전환효과 전 과 후의 중간상태를 보여줌  */
+}
+/* hover : 마우스를 올렸을때만 처리 */
+.container .item:nth-child(1):hover { 
+    width: 200px;
+    background-color: orange;
+}
+/* transform : 전환효과를 부여하는 속성*/
+.container .item:nth-child(2):hover { 
+    transform: rotate(45deg) scale(.5);
+}
+/* transform : 전환효과를 부여하는 속성*/
+.container .item:nth-child(3):hover { 
+    transform: perspective(200px) rotateX(45deg) ; /* rotateX : X축을 기준으로 3차원으로 변화를 줌*/
+    /* perspective : 원근법부여*/
+}

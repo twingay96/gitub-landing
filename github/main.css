@@ -1,0 +1,236 @@
+body { 
+    font-family: 'Poppins', sans-serif; /* 웹폰트 poppins 사용 만약 인터넷 끝기면sans-serif 폰트(고딕체)사용  */
+    font-weight: 300; /* 폰트의 가중치(두께) */ 
+}
+
+
+header {
+    position: relative;
+}
+header .forms input.form-control{ 
+    color: white;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255,255,0.3);   /* 테두리선의색을 반투명하게 */ 
+
+}
+header .forms input.form-control::placeholder { 
+    color: rgba(255, 255, 255, 6);
+}
+/* 속성선택자 */
+header[data-bs-target="#offcanvas"] { 
+    display: none; /* 평상시에는 안보임 */
+}
+header .offcanvas .list-group-item { 
+    padding : 16px;
+}
+header .offcanvas .list-group-item a{ 
+    color: black;
+    text-decoration: none; /* text-decoration: 텍스트에 밑줄,중앙줄,윗줄을 긋는 속성 */
+}
+header .offcanvas .list-group-item a:hover{ 
+    text-decoration: underline;
+}
+@media (max-width:992px) {
+    /* 다중선택자: 쉼표(,)로 여러개의 선택자를 구분하고 여러개의 선택자를 명시하고 하나의 스타일을 동시에 적용 */
+    header .logo{ 
+        flex-grow: 1;   /* logo가 차지하는 영역을 최대한늘려서 오른쪽으로 밀어낸다 */
+    }
+    header .nav,
+    header .forms input.form-control, /* header안의 forms의 input요소들중에 form-control클래스를 가진요소  */
+    header .forms .btn-link { 
+        display: none;
+    }
+    header[data-bs-target="#offcanvas"] {
+        display: block; /* width가 992px이하가 되면 보임 */
+    }
+}
+section.hero{ 
+    background-color: #040d22;
+    position: relative;
+    overflow: hidden;/* hero 영역밖으로 넘치는 부분은 잘라내기*/
+}
+
+section.hero .container{
+    padding-top: 160px;
+    padding-bottom:160px; 
+    position: relative;
+}
+
+section.hero .headline h1{ 
+    font-size : 68px;
+    font-weight: 700;
+    letter-spacing: -2px; /*글자 사이에 간격을 2px만큼 줄인다*/
+    /* color: rgba(,,, 0.5) */
+}
+
+section.hero .headline p{ 
+    font-size: 26px;
+    /* color:white; */   
+}
+
+section.hero img.globe { 
+    width: 900px;
+    position: absolute;
+    top: -5%;
+    left: 45%;
+}
+section.hero img.glow { 
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* section.hero .curve { 
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+} */
+
+section.hero .curve {
+    width: 100%;
+    transform: scaleY(.5);
+    transform-origin: bottom;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+section.youtube {
+
+}
+section.youtube .container{ 
+    padding-top: 50px;
+    padding-bottom: 70px;
+    position: relative;
+}
+section.youtube img.astronaut {
+    width: 480px;
+    position: absolute;
+    top : -420px;   /*container의 맨위에서 -420px(위로) 지점*/
+    right :0;       /*container의 오른쪽에서 0px 지점(숫자 0은 단위px를 붙이지 않는다.)*/
+}
+
+section.youtube .ratio {
+    border-radius: 10px; 
+    overflow: hidden;
+    background-color: black;
+}
+
+section.features { 
+
+}
+
+section.features .container { 
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+section.features .card { 
+    color:#627597;
+    border: none;   /*테두리선 사용하지 않겠다*/
+}
+section.features .card img {
+    /* padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 60px;
+    padding-right: 60px; */
+    padding : 30px 60px /*요소의위아래 요소의좌우 를 동시지정*/
+}
+
+section.map{ 
+
+}
+
+section.map .container{ 
+    padding-top: 100px;
+    padding-bottom: 100px;
+    color: #627597;
+}
+section.map h1{ 
+    font-size: 44px;
+    font-weight: 700;
+}
+section.map p{ 
+    font-size: 24px;
+}
+/* id선택자를 작성할때는 굳이 조상요소의 선택자를 작성할 필요가 없다. */
+#map {
+    height: 500px;
+    border: 1px solid rgb(0, 0, 0,0.2);
+    border-radius: 10px;
+    z-index: 1; /* 웹사이트는 x,y,z축이 존재함  z는 기본값이 0*/
+    /* map요소들은 다른요소들 보다 위에 쌓겠다 */
+    /* box-shadow: #040d22; */
+    /* background-color: black; */
+}
+footer { 
+    background-color: #040d22;
+    position: relative;
+    margin-top: 20%;
+}
+footer .curve {
+    position: absolute;
+    width: 100%;
+    /* transform: scaleY(0.02); */
+    /* transform-origin: bottom; */
+    transform :scale(1,-1);
+    left: 0;
+    top : -20px;
+}
+footer .container { 
+    
+}
+
+footer img.illustration {
+    width: 100%;
+    margin-top: -33%;
+    margin-bottom: 50px;
+    transform: scale(-1,1); /*좌우반전*/
+}
+
+footer img.logo {
+    opacity: 0.4;
+}
+footer h5 {
+    font-weight: 700;
+    color: rgba(255, 255, 255,0.4);
+    margin-bottom: 20px;
+}
+footer ul li {
+    margin-bottom: 10px;
+
+}
+footer ul li a { 
+    color: rgba(255, 255, 255, 0.4);
+    text-decoration: none; /* 밑줄제거 */
+    /* class="text-decoration-none"와 같은효과 인데 한번에 css에 해서 한번에적용 */
+    transition: .3s; /*전환효과: 몇초에 걸쳐서 자연스럽게 변화할지 정하기*/
+     /*회색 -> 흰색으로 0.3초에 걸쳐서 변화함  */
+}
+/* hover: 가상선택자, 사용자가 커서를 올리면 색갈이 변화함 */
+footer ul li a:hover { 
+    color: white;
+}
+
+footer .site-links {
+    margin:0; /*margin값을 전부 초기화 시켜준 다음에 */
+    margin-top: 60px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    display: flex;  /*site links의 요소들을 수평으로 */
+    justify-content: center; /* 요소들을 가운데 정렬*/
+}
+
+footer .site-links li {
+    color: rgba(255, 255, 255, 0.4);
+    margin: 0; /*margin값을 전부 초기화 시켜준 다음에 */
+    margin-right: 20px; /*li태그들의 오른쪽에 20px만큼 여백을 추가 */
+
+}
+/* 완벽한 가운데 정렬을 위해서 */
+/* 5번째 li태그에는 margin-right가 적용되지 않게 하겠다. */
+footer .site-links li:last-child { 
+    margin-right: 0;
+}

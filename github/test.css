@@ -1,0 +1,10 @@
+.hero{ 
+    position: relative;
+    background-color: black;
+}
+
+.hero .curve{ 
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+}

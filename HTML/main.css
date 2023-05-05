@@ -1,0 +1,6 @@
+/* 띄어쓰기는 후손선택자를 의미함 */
+.container .item {
+    width: 200px;
+    height: 100px;
+    background-color: tomato;
+}                                                                                       

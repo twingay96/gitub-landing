@@ -1,0 +1,15 @@
+.container{
+    background-color: orange;
+    display:flex;   /* 기본적으로 수직으로 정렬되어있던 자식요소들을 수평정렬 시킨다*/
+    justify-content: center;/* container의 자식요소인 item들을 수평 가운데정렬 */
+}
+.container .item{
+    width: 100px;
+    height: 100px;
+    background-color: royalblue;
+    border: 2px solid black;
+    box-sizing: border-box; /* borde, padding등으로 크기안변하게 고정*/
+    display: flex;
+    justify-content: center;/* item의 자식들 (Apple, Banana, Cherry)을 수평 가운데정렬  */
+    align-items: center; /* item요소의 자식들 (Apple, Banana, Cherry)을 수직 가운데정렬  */
+}

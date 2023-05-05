@@ -1,0 +1,29 @@
+/* 가상 클래스 선택자 */
+/* HOVER : 선택자 ABC요소에 마우스 커서가 올라가 있는 동안 선택 */
+a:hover{
+    color:red;
+}
+/*  ACTIVE:선택자 ABC요소에 마우스를 클릭하고 있는 동안 선택 */
+a:active{
+    color: red;
+}
+/* FOCUS : 선택자  ABC*/
+input:focus{
+    background-color: orange;
+}
+
+/* FIRST CHILD : 선택자  ABC가 형제 요소 중 첫째라면 선택*/
+.fruits span :first-child{ 
+    color: red;
+}
+.fruits h3:last-child{
+    color: red;
+}
+/* nth-child: 형제요소들 중에 (n)번째면 선택 */
+.fruits *:nth-child(2){
+    color:red;
+}
+.fruits *:nth-child(2n){    /* nth-child: 형제요소들 중에 (2n)번째면 0,2,4,6,8...번째선택 */
+    color:red;
+}
+

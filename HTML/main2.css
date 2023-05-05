@@ -1,0 +1,22 @@
+.container { 
+
+}
+/*  */
+.container .item { 
+    width: 200px;
+    height: 100px;
+    background-color: tomato;
+    margin-top: 20px; /* 외부여백(아래 부분을지정) */
+    margin-bottom: 20px; /* 외부여백 20px 추가*/
+    padding: 20px;  /* 내부여백 20px 추가*/
+    border: 4px dashed blue; /* border속성을 통해서 선에 대한 세부설정가능*/
+    box-sizing: border-box; /* 박스크기를 내가 지정한 값(width, height)으로 유지 */
+}
+
+
+.container .item:nth-child(2){
+    box-shadow: 10px 20px 30px rgba(0, 0, 0, 0.3);   /*  x방향으로 10px y방향으로 20px , 30px흐림처리 거리에 그림자 추가*/
+}
+.container .item:nth-child(3){ 
+    opacity: 0.5;    /* 투명도 0.5부여*/
+}

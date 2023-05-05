@@ -1,0 +1,12 @@
+/* https://heropy.blog/css/images/logo.png */
+/* https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Roh_Moo-hyun_presidential_portrait.jpg/338px-Roh_Moo-hyun_presidential_portrait.jpg */
+.container .item{ 
+    width: 200px;
+    height: 100px; 
+    background-color: royalblue;
+    margin: 10px;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Roh_Moo-hyun_presidential_portrait.jpg/338px-Roh_Moo-hyun_presidential_portrait.jpg);
+    background-size: 80px;
+    background-repeat: no-repeat; /*기본값은 repeat*/
+    background-position: bottom right;
+}

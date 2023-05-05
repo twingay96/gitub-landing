@@ -1,0 +1,25 @@
+.container{
+    width: 400px;
+    height: 250px;
+    margin: 50px;
+    padding: 20px;
+    background-color: orange;
+    box-sizing: border-box;
+    position: relative;/*자식요소들의 배치에기준이 될 수있는 속성*/
+}
+.container .item{ 
+    width:  100px;
+    height: 100px;
+    background-color: royalblue;
+}
+.container .item:nth-child(1){ 
+    position: absolute; /*부모요소를 기준으로 영역안에 배치 * ,부모요소부분에 배치의 기준이 될 수있는 속성이 부여 되어있어야*/
+    left :40px;
+    bottom: 100px;
+}
+
+.container .item:nth-child(2){ 
+    position: absolute;
+    top: 20px;
+    right: 100px;
+}

@@ -1,0 +1,15 @@
+.container {
+    width: 300px;
+    margin: auto; 
+    background-color: orange;
+}
+
+
+.btn { 
+    display: inline-block;
+    padding: 10px;
+    background-color: royalblue;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;    /* 마우스를 올리면 누르는 모양으로 변하게함 */
+}
